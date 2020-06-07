@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-07 23:01:39
- * @LastEditTime: 2020-06-07 23:04:07
+ * @LastEditTime: 2020-06-07 23:31:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \去哪儿火车票\pwa-learn\index.html
@@ -13,7 +13,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Learn PWA </title>
+    <link rel="stylesheet" href="./index.css">
 </head>
+<script>
+    navigator.serviceWorker.register('./sw.js', {
+        scopr: './'
+    }).then(registraintion => {
+        console.log('registraintion:', registraintion);
+    }, erroe => {
+        console.log('error:', error);
+    });
+</script>
 
 <body>
 
